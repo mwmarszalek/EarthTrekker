@@ -1,6 +1,6 @@
 Earth Trekker - My Travel Bucket List
 
-A simple app allowing user to add / remove countries visited /not visited.
+An app allowing user to add or remove countries that they visited
 
 Use main nav bar to see desired sections of the site.
 
@@ -9,7 +9,7 @@ Use action buttons to add / remove / mark cities / countries.
 App created using python, psycogp2 (psql), html and css
 
 Please see below for project brief:
-###################################################################################################################
+
 ## Travel Bucket List
 
 Build an app to track someone's travel adventures.
@@ -28,4 +28,3 @@ Build an app to track someone's travel adventures.
  * Add sights to the destination cities
  * Search for destination by continent, city or country
  * Any other ideas you might come up with
- ###################################################################################################################
