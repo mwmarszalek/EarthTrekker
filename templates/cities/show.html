@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="show-one">Details:</h1>
+    <table class="table-show-single">
+        <tr>
+          <th>City</th>
+          <th>Country</th>
+          <th>Visited</th>
+          <th>Edit</tr>
+        </tr>
+        <tr>
+          <td><a href="/cities/{{city.id}}">{{city.name}}</a></td>
+          <td>{{city.country.name}}</td>
+          <td> {% if city.visited %}
+            <i class="fa fa-check fa-2x" style="color: green"></i>
+        {% else %}
+            <i class="fa fa-times fa-2x"></i>
+        {% endif %}</td>
+            <td><a href="/cities/{{city.id}}/edit"><i class="fa fa-pencil-square" aria-hidden="true" style="color: rgb(128, 0, 115)"></i></a></td>
+        </tr>
+      </table>
+
+{% endblock content %}

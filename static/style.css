@@ -1,0 +1,245 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to right,brown,rgba(255, 200, 0, 0.78));
+
+    
+}
+
+.homepage-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 80px;
+    color:black;
+    opacity:0.8;
+    margin-bottom: 100px;
+    
+    
+}
+
+
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    background-image: linear-gradient(to right,rgb(165, 42, 42),rgba(255, 200, 0, 0.78));
+    border-style: groove;
+    border-color: rgb(255, 207, 155);
+    border-width: 8px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.visited-wrapper {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.visited  {
+   
+    display:flex;
+    gap:50px;
+    list-style-type: none;
+    margin-right: 30px;
+    font-size: 18px;
+    
+}
+
+.visited1 {
+    gap:100px;
+}
+
+
+
+.visited > li > a {
+    color:rgb(255, 38, 0);
+    opacity: 0.7;
+    font-weight: bold; 
+}
+
+.header-wrapper > ul > h1 {
+    color:white;
+    opacity: 0.6;
+}
+
+
+.home-cities-add-city {
+    display:flex;
+    align-items: center;
+    list-style: none;
+    gap:20px;
+}
+
+.see-visited-to-visit {
+    display:flex;
+    align-items: center;
+    list-style: none;
+    gap:20px;
+    margin-right: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    color:orange;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+
+.city-list-element {
+    padding:20px;
+    font-size: 25px;
+    
+}
+
+
+
+table,th,td {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    font-size: 25px;
+    padding:10px;
+    text-align: center;
+    box-shadow: 5px 3px;
+    
+
+}
+
+th {
+    width: 150px;
+   
+}
+
+table:hover {
+    background-color: rgb(255, 207, 155);
+}
+
+
+footer {
+    text-align: center;
+    font-size:14px;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    opacity:0.5;
+   
+    
+}
+
+
+
+.show-one,.edit-title,.add-city-title,.to-visit-title,.visited-title {
+    text-align: center;
+    text-shadow: 2px 2px black;
+    color:white;
+    opacity: 0.7;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+
+
+.form-element {
+    background-color: yellow;
+    font-size: 100px;
+}
+
+.form-edit,.form-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    font-size:25px;
+    
+    
+}
+
+input[type=text] {
+    font-size: 20px;
+    background-color: rgb(300, 176, 0);
+    transition: width 0.4s ease-in-out;
+}
+
+
+
+#visited,#country {
+    font-size: 20px;
+    position: relative;
+    background-color: rgb(300, 176, 0);
+}
+
+
+
+
+.save-edit-btn {
+    text-decoration: underline;
+    font-size: 15px;
+    padding:5px;
+    background-color: rgb(255, 166, 0);
+    font-weight: bold;
+    border-radius: 30%;
+    width:100px;
+    transition-duration: all 3s;
+    
+    
+}
+
+.save-edit-btn:hover {
+    cursor: pointer;
+    color: orangered;
+
+
+}
+
+
+
+
+.trash-button:hover {
+    cursor: pointer;
+}
+
+.mark-complete {
+    background-color: rgb(300, 176, 0);
+}
+
+
+.add-new-country-btn {
+    font-size:30px;
+}
+
+.countries {
+    margin-left: 40px;
+}
+
+.add-ctr-desc {
+    
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin-left: 100px;
+}
+
+#if-ctry-not-added {
+    margin-top:0px;
+    margin-bottom:0;
+}
+
+.globe-icons {
+    padding:30px;
+    opacity:0.7;
+    text-align: center;
+   
+}

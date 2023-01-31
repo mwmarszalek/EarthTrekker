@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="visited-title">Countries To Visit:</h1>
+{% for country in all_countries %}
+      
+
+    <table>
+        <tr>
+          <th>Country</th>
+          <th>Visited</th>
+          <th>Change to Visited</th>
+        </tr>
+        <tr>
+          <td><a href="/countries/{{country.id}}">{{country.name}}</a></td>
+          <td> {% if country.visited %}
+            <i class="fa fa-check fa-2x" style="color: green"></i>
+        {% else %}
+            <i class="fa fa-times fa-2x"></i>
+        {% endif %}</td>
+            <td class="delete-icon"><form class="delete-form" action="/countries/{{country.id}}/mark_visited" method="POST">
+                <button class="trash-button mark-complete"><i class="fa fa-check fa-3x" style="color:green" aria-hidden="true"></i></button></form></td>
+        </tr>
+      </table>
+
+{% endfor %}
+
+{% endblock %}

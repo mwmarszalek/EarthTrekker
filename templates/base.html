@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Earth Trekker®</title>
+</head>
+<body>
+  
+  <header>
+    <nav class="header-wrapper">
+      <ul class="home-cities-add-city">
+        <h1 id="earth-trekker-logo">Earth Trekker ®</h1>
+        <li><a href="/">Home</a></li>
+        <li><a href="/cities">Cities</a></li>
+        <li>
+          <a href="/cities/new">Add City</a>
+        </li>
+        <li>
+          <a class="countries" href="/countries">Countries</a>
+        </li>
+        <li>
+          <a href="/countries/add/new/2">Add Country</a>
+        </li>
+      </ul>
+      <div class="visited-wrapper">
+      <ul class="visited visited1">
+        <li>
+          <a href="/cities/visited">Cities Visited</a>
+        </li>
+        <li>
+        
+          <a href="/countries/visited">Countries Visited</a>
+        </li>
+      </ul>
+      <ul class="visited">
+        <li>
+          <a href="/cities/to_visit">Cities Still To Visit</a>
+        </li>
+        <li>
+          <a href="/countries/to_visit">Countries Still To Visit</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+    <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer><h4>Copyright ® 2022 Michal Marszalek </h4>
+
+
+  </footer>
+
+</body>
+</html>
+
+
+ 

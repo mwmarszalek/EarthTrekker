@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <h1 class="edit-title">Edit:</h1>
+    <form action="/countries/{{country.id}}" method="post" class="form-edit">
+        <div>
+            <label for="name">Country Name:&nbsp</label>
+            <input type="text" id="name" value="{{country.name}}" name="name">
+        </div>
+
+         
+        <div>
+            <label for="visited">Visited:&nbsp</label>
+            <select id="visited" name="visited">
+                <option value="true"
+                {% if country.visited %} selected="selected" {% endif %} >Visited</option>
+                <option value="false"
+                {% if country.visited == False %} selected="selected" {% endif %}>Not Yet!</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="save-edit-btn">Save</button>
+    </form>
+
+{% endblock content %}

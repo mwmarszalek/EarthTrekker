@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='alt_style.css') }}">
+<h1 class="add-city-title">Add New City:</h1>
+<form action="/cities" method="post" class="form-new">
+  <label for="name">City Name:&nbsp</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Name"
+    required
+    autofocus
+  />
+
+  <div>
+    <label for="country">Country:&nbsp</label>
+    <select id="country" name="country_id">
+      {% for country in all_countries %}
+        <option value="{{ country.id }}">{{ country.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+
+
+  <label for="visited">Visited:&nbsp</label>
+  <select id="visited" name="visited">
+    <option value="true">Yes Sir!</option>
+    <option value="false">Not Yet!</option>
+  </select>
+
+  <button type="submit" class="save-edit-btn">Add City</button>
+</form>
+<div class="add-ctr-desc">
+  <i class="fa fa-arrow-down fa-2x"></i>
+  <h4 id="if-ctry-not-added">If country is not listed use button below to Add it!</h4>
+  <i class="fa fa-arrow-down fa-2x"></i>
+  <form action="/countries/add/new">
+    <input type="submit" value="Add country" class="save-edit-btn"/>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="visited-title">Cities visited:</h1>
+{% for city in all_cities %}
+      
+    
+<table>
+    <tr>
+      <th>City</th>
+      <th>Country</th>
+      <th>Visited</th>
+      <th>Delete?</th>
+    </tr>
+    <tr>
+      <td><a href="/cities/{{city.id}}">{{city.name}}</a></td>
+      <td>{{city.country.name}}</td>
+      <td> {% if city.visited %}
+        <i class="fa fa-check fa-2x" style="color: green"></i>
+    {% else %}
+        <i class="fa fa-times fa-2x"></i>
+    {% endif %}</td>
+        <td class="delete-icon"><form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button></form></td>
+    </tr>
+  </table>
+{% endfor %}
+
+{% endblock %}
